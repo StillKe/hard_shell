@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-
+#include <fcntl.h>
 extern char **environ;
 
 #define MAX_COMMAND_LENGTH 256
