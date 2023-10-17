@@ -13,6 +13,7 @@ extern char **environ;
 #define MAX_COMMAND_LENGTH 256
 #define MAX_ALIASES 50
 #define MAX_ALIAS_NAME 50
+#define MAX_INPUT_SIZE 1024
 
 struct Alias
 {
@@ -24,5 +25,7 @@ void add_alias(struct Alias *aliases, int *alias_count, const char *name, const 
 int sub_alias(char *input, struct Alias *aliases, int alias_count);
 void start_child(char *input);
 void wait_pid();
+
+int mkdir(const char *path, mode_t mode);
 
 #endif
